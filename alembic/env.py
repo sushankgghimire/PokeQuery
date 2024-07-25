@@ -50,7 +50,7 @@ def run_migrations_offline() -> None:
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url", DATABASE_URL)
+    url = DATABASE_URL
     context.configure(
         url=url,
         target_metadata=target_metadata,
@@ -70,7 +70,7 @@ def do_run_migrations(connection):
 async def run_migrations_online() -> None:
     """Run migrations in 'online' mode."""
 
-    connectable = create_async_engine(config.get_main_option("sqlalchemy.url", DATABASE_URL), future=True, poolclass=pool.NullPool)
+    connectable = create_async_engine(DATABASE_URL, future=True, poolclass=pool.NullPool)
 
     async with connectable.connect() as connection:
         await connection.run_sync(do_run_migrations)
