@@ -43,7 +43,7 @@ alembic upgrade head
 ```
 uvicorn app.main:app --reload
 ```
-### 7. Access the API at http://127.0.0.1:8000/api/v1/pokemons with your name and type query parameters.
+### 7. Access the API at `http://127.0.0.1:8000/api/v1/pokemons` with your name and type query parameters.
 
 ## Endpoints
 
