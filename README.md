@@ -18,12 +18,37 @@ This project provides a REST API to serve a list of Pokémon with their names, i
 git clone https://github.com/sushankgghimire/PokeQuery
 cd PokeQuery
 ```
-### 2. Create and Activate a Virtual Environment
+## 2. Create and Activate a Virtual Environment
 
-```
-python -m venv venv
-source venv/bin/activate
-```
+### For Linux
+
+1. **Create a Virtual Environment:**
+
+    ```bash
+    python -m venv venv
+    ```
+
+2. **Activate the Virtual Environment:**
+
+    ```bash
+    source venv/bin/activate
+    ```
+
+### For Windows
+
+1. **Create a Virtual Environment:**
+
+    ```cmd
+    python -m venv venv
+    ```
+
+2. **Activate the Virtual Environment:**
+
+    ```cmd
+    venv\Scripts\activate
+    ```
+
+Once activated, you will see the virtual environment's name in your command prompt, indicating that it is active. You can now install dependencies and run your application within this isolated environment.
 ### 3. Install Dependencies
 ```
 pip install -r requirements.txt
