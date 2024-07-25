@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import sessionmaker
 from alembic import context
 from sqlalchemy import pool
+from dotenv import load_dotenv
 
 from app.database import Base
 from app.models import *
