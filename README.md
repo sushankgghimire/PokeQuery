@@ -57,6 +57,18 @@ pip install -r requirements.txt
 Using the `.env_example` file, create a `.env` file in the root directory with the following content:
 ```
 DATABASE_URL=postgresql+asyncpg://username:password@localhost/dbname
+
+
+### Creating the PostgreSQL Database
+
+Before running your application, ensure that you have created the PostgreSQL database. You can create a new database using your preferred PostgreSQL management tool or command-line interface. 
+
+1. **Create a Database**: Follow the instructions for your PostgreSQL setup to create a new database.
+
+2. **Update the `.env` File**: Ensure that the `DATABASE_URL` in your `.env` file matches your PostgreSQL database connection details.
+
+With the database created and your `.env` file configured, your application will be able to connect to the PostgreSQL database.
+
 ```
 
 ### 5. Run Database migrations

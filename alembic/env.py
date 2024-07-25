@@ -14,6 +14,12 @@ from app.models import *
 # access to the values within the .ini file in use.
 config = context.config
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the database URL from environment variables
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 if config.config_file_name is not None:
@@ -42,7 +48,7 @@ def run_migrations_offline() -> None:
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url")
+    url = config.get_main_option("sqlalchemy.url", DATABASE_URL)
     context.configure(
         url=url,
         target_metadata=target_metadata,
