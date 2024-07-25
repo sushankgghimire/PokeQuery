@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+# pydantic models to access the data
 class PokemonBase(BaseModel):
     name: str
     image_url: str
@@ -12,4 +13,4 @@ class Pokemon(PokemonBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
